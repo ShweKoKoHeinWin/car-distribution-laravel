@@ -1,0 +1,81 @@
+html {
+    scroll-behavior: smooth;scroll-padding: 70px;
+  }
+
+body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+  
+
+section {
+    min-height: 90vh;
+}
+
+img {
+    width: 100%;
+}
+
+.brands img {
+    width: min(100% , 80px);
+}
+
+#contact{
+    background: linear-gradient(120deg, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 60%,transparent 50%,transparent 100%),url('../image/cars/app/environment.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.tab-bar {
+    display: flex;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .tab:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .tab.active {
+    background-color: #ccc;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.show {
+    display: block;
+  }
+  
+
+@media (min-width: 992px) {
+    .main-nav {
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 768px) {
+    #contact {
+        background:  linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url('../image/cars/app/environment.jpg');;
+    }
+}
+
+@media (max-width: 576px) {
+
+        .order-xs-1 { order: 1; }
+        .order-xs-2 { order: 2; }
+        .order-xs-3 { order: 3; }
+        .order-xs-4 { order: 4; }
+
+}
