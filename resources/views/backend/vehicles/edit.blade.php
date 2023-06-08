@@ -1,7 +1,10 @@
 <x-backend-layout>
 
+    @if(auth()->check())
     <a href="{{url('/backend/vehicles')}}" class="btn btn-primary my-4">Back</a>
-
+    @else
+    <a href="{{url('/frontend/vehicles')}}" class="btn btn-primary my-4">Back</a>
+    @endif
     <div class="col-8 offset-2 py-4">
 
         <x-flash-message />

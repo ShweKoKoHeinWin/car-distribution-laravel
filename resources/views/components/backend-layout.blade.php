@@ -29,7 +29,7 @@
             <img src="{{asset('image\cars\app\brand-logo-removebg-preview.png')}}" alt="Brand Logo" style="width:50px; height: 50px;">
             <h5 class="h5 d-inline text-sucess">Shwe</h5>
           </a>
-
+@if(auth()->check())
           @if (auth()->user()->hasAnyRole(['Ceo', 'Manager', 'Vehicle expert', 'Content Writer']))
 
           <a href="/" class="d-block">
@@ -120,9 +120,12 @@
             </ul>
           
           </div>
+            @endif
         </div>
       </nav>
     <div class="container-fluid px-2" style="padding-top:90px">
+
+  
   {{$slot}}
     </div>
   

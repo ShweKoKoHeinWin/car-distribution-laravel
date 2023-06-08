@@ -13,6 +13,7 @@
 @endphp
 
 <x-backend-layout>
+  <x-flash-message />
   <div class="row">
 
       <ul class="list-group col-12 col-lg-3" id="myList">

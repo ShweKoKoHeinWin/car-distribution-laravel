@@ -1,16 +1,20 @@
 <x-backend-layout>
-  
-<a href="{{url('/backend/vehicles/')}}" class="btn btn-warning my-4">Back</a>
-
+  @if(auth()->check())
+  <a href="{{url('/backend/vehicles')}}" class="btn btn-primary my-4">Back</a>
+  @else
+  <a href="{{url('/vehicles')}}" class="btn btn-primary my-4">Back</a>
+  @endif
 
 <div class="row">
     <div class="col-12 col-md-8 offset-md-2 p-3">
 
       {{-- edit buttom --}}
+      @if(auth()->check())
       @if(auth()->user()->hasAnyRole(['Ceo', 'Manager', 'Vehicle expert']))
         <div class="d-flex justify-content-end">
           <a href="{{url('/backend/vehicles/' . $vehicle->id . '/edit')}}" class="btn btn-warning mx-2">Edit</a>
         </div>
+      @endif
       @endif
 
         <h3 class="h3 text-center">{{$vehicle->brand->title . ' ' . $vehicle->model}}</h3>
